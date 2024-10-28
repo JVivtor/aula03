@@ -1,14 +1,21 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './pages/Home'
+export default function Lista({produtos}){
+  return (
+      <>
+      
+        <h1>
+          Lista de Produtos
+        </h1>
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <BrowserRouter>
-       <Routes>
-            <Route path="/" element={<Home/>}/>
-       </Routes>
-    </BrowserRouter>
-  </StrictMode>,
-)
+        <ul>
+          {produtos.map(produto => (
+            <li key={produto.id}>
+              <h2>{produto.title}</h2>
+              <p>{produto.description}</p>
+              <p>Preço: ${produto.price}</p>
+              <img src={produto.image} alt={produto.title} width={100} />
+            </li>
+          ))}
+        </ul>
+      </>
+    )
+  }
