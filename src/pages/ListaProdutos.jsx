@@ -1,7 +1,5 @@
-import styles from '../pages/ListaProdutos.module.css'
 
-
-export default function ListaProdutos({produtos}){
+ export default function ListaProdutos({produtos}){
     return (
         <>
         

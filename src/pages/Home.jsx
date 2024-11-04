@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Teste from "./Teste"
+import Teste from "./ListaProdutos"
 export default function App() {
   
   const [Lista, setLista] = useState([]);
