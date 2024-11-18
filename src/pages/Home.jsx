@@ -21,6 +21,17 @@ export default function App() {
     receberListaProdutos();
   }, []);
 
+  const orderAZ = ()=>{
+    const listaAux = [...lista].sort((a, b)=> a.title.localCompare(b.title));
+    setlista(listaAux);
+  }
+   return (
+    <>
+     <h1>Lista de Produtos</h1>
+     <listaProdutos lista={lista}/>
+    </>
+   )
+
   return (
     <Teste produtos={Lista}/>
   );
